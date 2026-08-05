@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Aliya</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Orbitron', sans-serif; /* Futuristic font */
+            background: linear-gradient(135deg, #ff69b4, #8a2be2); /* Pink and purple gradient */
+            color: #fff; /* White text for contrast */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4; /* Glowing text effect */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        button {
+            background: #ff69b4; /* Pink button */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4; /* Glowing button effect */
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff1493; /* Darker pink on hover */
+            box-shadow: 0 0 20px #ff1493, 0 0 30px #ff1493;
+        }
+
+        img {
+            border: 3px solid #ff69b4; /* Pink border around images */
+            border-radius: 15px;
+            box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff69b4; /* Glowing effect for images */
+            margin-top: 10px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+            border-radius: 15px;
+            box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff69b4; /* Glowing section effect */
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Hi, I'm Aliya!</h2>
+            <p>I enjoy collecting albums from my favorite artists and listening to music. Playing my clarinet is one of my hobbies, and in my free time, I love watching K-dramas and C-dramas.</p>
+        </section>
+        <section>
+            <h2>Things I Like</h2>
+            <ul>
+                <li>Collecting albums</li>
+                <li>Listening to music</li>
+                <li>Playing the clarinet</li>
+                <li>Watching K-dramas and C-dramas</li>
+                <ul>
+                    <li>Favorites:</li>
+                    <li>
+                        <em>When I Fly Towards You</em>
+                        <br>
+                        <img id="drama1" src="https://image.tmdb.org/t/p/original/rdtigJdyCBXO694JXAFAfGJf61m.jpg" alt="When I Fly Towards You" width="200" style="display: none;">
+                    </li>
+                    <li>
+                        <em>The Art of Sarah</em>
+                        <br>
+                        <img id="drama2" src="https://s1.dmcdn.net/v/aL6py1gJYkXdqLVGV/x240" alt="The Art of Sarah" width="300" style="display: none;">
+                    </li>
+                    <li>
+                        <em>Squid Game</em>
+                        <br>
+                        <img id="drama3" src="https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXb5isLW0ysHm4fsoZOZRmi1MoTw4L4YKK0oGP-hAi8ZPQZcrwlSz-Mh_IbyHKr7QPJuM3DGiMqnGyanyhWqW_rYaIkx4h-gafVM.jpg?r=609" alt="Squid Game" width="200" style="display: none;">
+                    </li>
+                    <li>
+                        <em>Teach You A Lessonh</em>
+                        <br>
+                        <img id="drama4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ558zm603SDMMrMjN9W-kkUZd_uaJIENTZYmPxa9sFEQ&s=10" alt="Teach You A Lesson" width="300" style="display: none;">
+                    </li>
+                    <li>
+                        <em>Weak Hero</em>
+                        <br>
+                        <img id="drama5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw7V-JNwSXH3zJFIbN-k6XD16zGOpoOjd7ozi8Xn0AaA&s=10" alt="Weak Hero" width="200" style="display: none;">
+                    </li>
+                    <li>
+                        <em>If Wishes Could Kill</em>
+                        <br>
+                        <img id="drama6" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZV638CJF1bReF57zFleHoih0_pzFW2l_trD0L9Ac3A&s=10" alt="If Wishes Could Kill" width="200" style="display: none;">
+                    </li>
+                </ul>
+                </ul>
+            </ul>
+            <button onclick="togglePictures()">Show/Hide Pictures</button>
+        </section>
+    </main>
+    <script>
+        function togglePictures() {
+            const drama1 = document.getElementById('drama1');
+            const drama2 = document.getElementById('drama2');
+            const drama3 = document.getElementById('drama3');
+            const drama4 = document.getElementById('drama4');
+            const drama5 = document.getElementById('drama5');
+            const drama6 = document.getElementById('drama6');
+            
+            // Toggle display property
+            drama1.style.display = drama1.style.display === 'none' ? 'block' : 'none';
+            drama2.style.display = drama2.style.display === 'none' ? 'block' : 'none';
+            drama3.style.display = drama3.style.display === 'none' ? 'block' : 'none';
+            drama4.style.display = drama4.style.display === 'none' ? 'block' : 'none';
+            drama5.style.display = drama5.style.display === 'none' ? 'block' : 'none';
+            drama6.style.display = drama6.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
